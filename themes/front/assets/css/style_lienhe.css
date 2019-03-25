@@ -1,0 +1,166 @@
+
+/*BREADCRUMB*/
+#breadcrumb{
+	background: #f8f9fc;
+	height: 50px;
+}
+#breadcrumb>.container{
+	height: 50px;
+	border-bottom: 1px solid #d9d9d9;
+}
+#path{
+	padding-top: 10px;
+}
+#path>a>.fa-home{
+	font-size: 18px;
+	color:#999;
+}
+#path>a{
+	position: relative;
+	font-size:14px;
+}
+#path>a:hover{
+	text-decoration: underline;
+	background-color: #f8f9fc;
+}
+.btn{
+	margin-left: 0 !important;
+	color:#999;
+	border:none;
+	padding: 0 10px 0 15px;
+}
+.btn:not(:last-child):after{
+	content: " ";
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+	border-left: 8px solid #f8f9fc;
+	position: absolute;
+	top: 85%;
+	margin-top: -17px;
+	left: 100%;
+	z-index:2;
+	
+
+}
+.btn:not(:last-child):before{
+	content: " ";
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+	border-left: 8px solid #999;
+	position: absolute;
+	top: 85%;
+	margin-top: -17px;
+	margin-left: 1px;
+	left: 100%;
+	z-index:2;
+
+}
+/*END BREADCRUMB*/
+
+#title{
+	text-align: center;
+}
+/*LEFT*/
+.item-contact{
+	margin: 0 0 2.5rem;
+}
+.title-contact{
+	font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.625rem;
+}
+.contact{
+	font-size: .9375rem;
+    color: #333;
+    line-height: 1.3375rem;
+    margin: 0 0 .625rem;
+}
+.contact>i{
+	color: #00aced;
+    vertical-align: top;
+    display: inline-block;
+    width: 20px;
+    margin-top: 3px;
+}
+.contact>span{
+	display: inline-block;
+    width: calc(100% - 25px);
+    color: #333;
+}
+.contact>span>a{
+	color: #333;
+}
+.contact>span>a:hover{
+	color: #007bff;
+}
+/*END LEFT*/
+
+/*RIGHT*/
+
+.text-input{
+	font-size: .875rem;
+    color: #666;
+    width: 100%;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    text-align: left;
+    background-color: transparent;
+    display: block;
+    border: 1px solid #005aa6;
+    border-radius: .25rem;
+    margin-bottom: 15px;
+}
+#textarea{
+	width: 100%;
+	min-height: 120px;
+	margin-bottom: 10px;
+	font-size: .875rem;
+    color: #666;
+    width: 100%;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    text-align: left;
+    background-color: transparent;
+    display: block;
+    border: 1px solid #005aa6;
+    border-radius: .25rem;
+    margin-bottom: 15px;
+}
+.btn-send{
+	background-color: #0068c0;
+    font-size: .933rem;
+    color: #fff;
+    padding: .5rem 1.5rem;
+    margin-left: 35% !important;;
+}
+/*END RIGHT*/
+.col-xs-12.col-md-7.col-lg-8>iframe{
+ width:100%;
+ max-height:auto;
+ margin-bottom:30px;
+ margin-top:-2px;
+}
+.col-xs-12.col-md-12.col-lg-12>h1{
+	color: #378504;
+	font-size: 18px;
+    font-weight: 550;
+    font-family: Roboto;
+    letter-spacing: 0.25px;
+	margin-bottom:30px;
+}
+
+
+@media (max-width:991px){
+	.col-xs-12.col-md-7.col-lg-8>iframe{height:350px;}
+		
+}

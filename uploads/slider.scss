@@ -1,0 +1,238 @@
+.main-slider {
+  position: relative;
+
+  .slick-slide {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+
+    &:focus, a {
+      outline: none;
+    }
+
+    img {
+      min-width: 100%;
+      min-height: 100%;
+
+      @include breakpoint(sm) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    top: 50%;
+    right: 10px;
+    transform: translate(0,-50%);
+
+    li {
+      list-style: none;
+      margin: 15px 0;
+      background-color: transparent;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      position: relative;
+
+      &.slick-active {
+        border: 1px solid #F6921E;
+        opacity: .7;
+
+        button {
+          background-color: #F6921E;
+          opacity: .7;
+        }
+      }
+
+      button {
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        background-color: #FFF;
+        opacity: .5;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 0;
+        line-height: 0;
+        display: block;
+        color: transparent;
+        border: 0;
+        outline: 0;
+      }
+    }
+  }
+}
+
+#sliderWrapper {
+  position: relative;
+  border-bottom: 8px solid #222828;
+
+  .slider-footer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    @include breakpoint(sm) {
+      .sf-center, .sf-left > .image-wrapper, .sf-right > .image-wrapper {
+        display: none;
+      }
+
+      div.sf-left .subscribe, div.sf-right .contact {
+        box-shadow: initial;
+        width: 260px;
+
+        a {
+          font-size: 16px;
+        }
+      }
+
+      .slider-footer-wrapper {
+        width: 100%;
+      }
+    }
+
+    @include breakpoint(550px) {
+      div.slider-footer-wrapper {
+        width:100%;
+        height: auto;
+
+        .contact-wrapper, .subscribe-wrapper {
+          height: auto;
+        }
+
+        div.sf-left, div.sf-right {
+           padding: 0px;
+        }
+
+        div.sf-left .subscribe, div.sf-right .contact{
+          position: static;
+          width: 49vw;
+          height: 100%;
+          border-radius: 0px;
+          text-align: center;
+          padding: 7px 2px;
+          margin: 0px;
+
+          a {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+
+    .slider-footer-wrapper {
+      position: relative;
+      width: 400px;
+
+      .image-wrapper {
+        position: relative;
+        z-index: 1;
+      }
+
+      .sf-left {
+        padding-right: 30px;
+
+        &>div {
+          float: right;
+        }
+
+      }
+
+      .sf-right {
+        padding-left: 30px;
+
+        &>div {
+          float: left;
+        }
+      }
+
+      .sf-center {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 0);
+        z-index: 3;
+
+        .play-btn {
+          position: absolute;
+          width: 40px;
+          height: 40px;
+          background-color: #222828;
+          top: 65%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+          border: 3px solid #EBEBEB;
+          cursor: pointer;
+
+          &:hover:after {
+            border-left-color: #E87F05;
+          }
+
+          &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 13px solid #F6921E;
+            top: 50%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+
+      .contact-wrapper, .subscribe-wrapper {
+        height: 69px;
+        position: relative;
+      }
+
+      .contact, .subscribe {
+        position: absolute;
+        bottom: 0;
+        background-color: #F6921E;
+        width: 300px;
+        padding-top: 10px;
+        padding-bottom: 4px;
+        box-shadow: 0 0 35px rgba(0, 0, 0, .5);
+
+        a {
+          font-size: 18px;
+          text-transform: uppercase;
+          font-family: 'Roboto Condensed';
+          font-weight: bold;
+          color: #fff;
+
+          &:hover, &:focus, & {
+            text-decoration: none;
+          }
+        }
+      }
+
+      .contact {
+        left: 0;
+        border-top-right-radius: 30px;
+        margin-left: -40px;
+        padding-left: 50px;
+      }
+
+      .subscribe {
+        right: 0;
+        border-top-left-radius: 30px;
+        margin-right: -40px;
+        padding-right: 50px;
+        text-align: right;
+      }
+    }
+  }
+}
+

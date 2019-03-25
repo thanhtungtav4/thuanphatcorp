@@ -1,0 +1,13 @@
+RewriteEngine On
+
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-s
+RewriteRule (.*\.(jpg|gif|png|JPG))$ phpprocess/imageservice.php?p=$1 [L]
+
+<Files imageservice.php>
+
+allow from all
+
+</Files>
+
